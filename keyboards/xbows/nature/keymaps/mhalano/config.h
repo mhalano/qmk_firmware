@@ -64,5 +64,3 @@
 #endif
 
 #define CAPS_WORD_IDLE_TIMEOUT 5000
-
-#define FORCE_NKRO
