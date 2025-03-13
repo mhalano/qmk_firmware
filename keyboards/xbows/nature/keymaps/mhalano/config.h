@@ -59,8 +59,10 @@
 #    undef ENABLE_RGB_MATRIX_HUE_PENDULUM
 #    undef ENABLE_RGB_MATRIX_HUE_WAVE
 #    undef ENABLE_RGB_MATRIX_EFFECT_MAX
-
-#define RGB_DISABLE_TIMEOUT 600000
 #endif
 
-#define CAPS_WORD_IDLE_TIMEOUT 5000
+// Turn off leds in 5 min.
+#define RGB_MATRIX_TIMEOUT 300000
+
+// Not using CAPS WORD anymore
+// #define CAPS_WORD_IDLE_TIMEOUT 5000
