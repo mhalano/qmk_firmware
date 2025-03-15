@@ -15,9 +15,9 @@
  */
 #pragma once
 
+// Remove all the effect I don't want to use
 #ifdef RGB_MATRIX_ENABLE
 #    undef RGB_MATRIX_STARTUP_MODE // Unsets the default mode, if none has been set
-#    undef ENABLE_RGB_MATRIX_SOLID_COLOR               // Static single hue, no speed support
 #    undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN          // Static gradient top to bottom, speed controls how much gradient changes
 #    undef ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 #    undef ENABLE_RGB_MATRIX_BAND_SAT                  // Single hue band fading saturation scrolling left to right
@@ -61,8 +61,12 @@
 #    undef ENABLE_RGB_MATRIX_EFFECT_MAX
 #endif
 
+// Set color to white
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_COLOR
+#define RGB_MATRIX_DEFAULT_SAT 0
+
 // Turn off leds in 5 min.
 #define RGB_MATRIX_TIMEOUT 300000
 
-// Not using CAPS WORD anymore
-// #define CAPS_WORD_IDLE_TIMEOUT 5000
+#define TAPPING_TERM 600
+#define TAPPING_TERM_PER_KEY
